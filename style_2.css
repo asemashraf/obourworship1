@@ -1,0 +1,144 @@
+﻿#a {
+    background-color: darkblue;
+    font-size: 35px;
+    font-language-override: unset;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    font-family: Algerian;
+    color: white;
+    border-radius: 50px;
+    font-size: 30px;
+
+
+}
+
+    #a:hover {
+        color: white;
+        background-color: yellow;
+        color: black;
+    }
+
+
+
+
+
+
+
+
+
+
+
+#t{
+
+color:white;
+font-size:20px;
+
+text-align:center;
+
+}
+
+#c{
+
+color:maroon;
+
+background-color:darkgrey
+}
+
+
+#p{
+text-align: center
+}
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+outline: none;
+}
+
+header{
+width: 100%;
+height: 60px;
+background-color: yellow;
+}
+
+#gis {
+    float: left;
+    color: black;
+    font-family: Tahoma;
+    padding: 9px 0 50px;
+    scrollbar-highlight-color: blue
+}
+
+    #gis h1 {
+        color: black;
+        font-family: Tahoma;
+        margin-left: 500px;
+    }
+
+
+
+
+
+nav ul{
+list-style: none;
+float: right;
+height: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-right: 60px;
+}
+
+
+
+
+nav ul li a {
+text-decoration: none;
+color: black;
+font-size: 25px;
+font-family: 'Times New Roman', Times, serif;
+padding: 0 15px;
+border: 2px;
+border-radius: 10px;
+background-color: transparent;
+}
+
+    nav ul li a:hover {
+        background-color: darkblue;
+        color: white;
+        font-size: 28px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+#p {
+margin: 50px 100px 50px 800px;
+display: inline-block;
+margin: 50px 20px 40px 40px;
+}
+
+#m {
+text-align: center;
+color: white;
+font-size: 30px;
+border: double
+}
+
+
+#po {
+    color: white;
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 20px;
+}
+

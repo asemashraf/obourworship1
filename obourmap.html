@@ -1,0 +1,219 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="style_2.css" />
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title> خريطة دور العبادة </title>
+
+    <body>
+        <style>
+            body {
+
+            
+                background-image: url(https://i.kinja-img.com/gawker-media/image/upload/t_original/badfsqoe2vbib30u4fir.gif);
+                background-repeat: no-repeat;
+                background-size: 100% 100%
+            }
+            
+        </style>
+
+        <header>
+            <div id="gis">
+                <h1>OboUR City</h1>
+            </div>
+
+            <nav>
+
+
+
+                <ul>
+
+
+
+
+
+                    <li>
+                        <a href="https://wa.me/qr/LSBUCD4UVOAOC"> تواصل واتساب </a>
+
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.facebook.com/asem.ashraf.714/"> المطور</a>
+
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.mediafire.com/file/cx8lvsw5vwb3zb3/project_obour.apk/file"> تطبيق الموبايل</a>
+
+                    </li>
+
+                    <li>
+                        <a href="https://www.google.com/maps/search/%D9%85%D8%B3%D8%A7%D8%AC%D8%AF+%D8%A7%D9%84%D8%B9%D8%A8%D9%88%D8%B1%E2%80%AD/@30.2299954,31.48754,13.25z?hl=ar"> تتبع المساجد </a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.google.com/maps/search/%D9%83%D9%86%D8%A7%D9%8A%D8%B3+%D8%A7%D9%84%D8%B9%D8%A8%D9%88%D8%B1%E2%80%AD/@30.2428724,31.5071455,13z/data=!3m1!4b1?hl=ar"> تتبع الكنائس </a>
+                    </li>
+
+
+
+
+                    <li>
+                        <a href=""> الخريطةالتفاعلية </a>
+                    </li>
+
+                    <li>
+                        <a href=""> الصفحةالرئيسية </a>
+                    </li>
+
+
+
+
+
+                </ul>
+
+            </nav>
+
+
+        </header>
+
+        <div id="a">
+            مساجد وكنائس واديرة مدينة العبور
+
+        </div>
+
+
+        <div id="t">
+            العبور هي مدينة مصرية جديدة من مدن الجيل الثاني، تقع في محافظة القليوبية، وتتبع إدارياً لهيئة المجتمعات العمرانية الجديدة، أنشأت بقرار رئيس مجلس الوزراء رقم 1290 لسنة 1982، وكانت أراضيها سابقا قبل استصلاحها جزء من صحراء مركز الخانكة وتتميّز مدينة العبور بأن بها تقسيم عالي من الكفاءة فهي مدينة متكاملة فيها مناطق صناعية قريبة من المناطق السكنية، تضم المدينة السوق الرئيسي لمحافظات القاهرة الكبرى وهو سوق العبور ذلك السوق المتكامل للخضروات والأسماك والفواكه، كما تضم العديد من النوادي والمناطق الترفيهية
+
+        </div>
+
+
+        <div id="po">
+            <a href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%B9%D8%A8%D9%88%D8%B1_(%D8%A7%D9%84%D9%82%D9%84%D9%8A%D9%88%D8%A8%D9%8A%D8%A9)" style="color:cyan"> (لمزيد من المعلومات يمكنك الانتقال الى (ويكيبديا </a>
+        </div>
+
+     </body>
+
+
+
+
+
+    <style>
+        html, body, #viewDiv {
+            padding: 0%;
+            margin: 0%;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.18/"></script>
+    
+    <script>
+        require([
+            "esri/config",
+            "esri/Map",
+            "esri/views/MapView",
+            "esri/layers/FeatureLayer",
+            "esri/widgets/ScaleBar",
+            "esri/widgets/Legend",
+            "esri/widgets/Editor"
+
+        ], function (esriConfig, Map, MapView, FeatureLayer, ScaleBar, Legend, Editor) {
+
+            esriConfig.apiKey = "AAPK64e6f646f3f9477d881667ec0432fad8SR4AArUarvmtFw9fNob0D2c9SRKDxEgDRadwBBtB1sYQWp93KuQfr8GM6S8aLU0K";
+
+            const map = new Map({
+                basemap: "arcgis-topographic"
+            });
+
+            const view = new MapView({
+                container: "viewDiv",
+                map: map,
+                center: [31.447849, 30.228001],
+                zoom: 13
+            });
+
+            //Trailheads feature layer (points)
+            const trailheadsLayer = new FeatureLayer({
+                url: "https://services7.arcgis.com/8xUpDr7La9nmiulS/arcgis/rest/services/obour/FeatureServer/0"
+            });
+            map.add(trailheadsLayer);
+
+            const trail = new FeatureLayer({
+                url: "https://services7.arcgis.com/8xUpDr7La9nmiulS/arcgis/rest/services/MyMapService/FeatureServer/0"
+            });
+
+            map.add(trail);
+
+
+
+
+
+
+
+
+            const scalebar = new ScaleBar({
+                view: view
+            });
+            view.ui.add(scalebar, "bottom-left");
+            const legend = new Legend({
+                view: view
+            });
+            view.ui.add(legend, "top-right");
+
+            const editor = new Editor({
+                view: view
+            });
+            // Add widget to the view
+            view.ui.add(editor, "top-right");
+
+
+            //Trails feature layer (lines)
+            const trailsLayer = new FeatureLayer({
+                url: "https://services7.arcgis.com/8xUpDr7La9nmiulS/arcgis/rest/services/obour/FeatureServer/2"
+            });
+            map.add(trailsLayer, 0);
+
+
+            // Parks and open spaces (polygons)
+            const parksLayer = new FeatureLayer({
+                url: "https://services7.arcgis.com/8xUpDr7La9nmiulS/arcgis/rest/services/obour/FeatureServer/3"
+
+            });
+            map.add(parksLayer, 0);
+
+            // Parks and open spaces (polygons)
+            const parksLayerq = new FeatureLayer({
+                url: "https://services7.arcgis.com/8xUpDr7La9nmiulS/arcgis/rest/services/obour/FeatureServer/4"
+
+
+            });
+            map.add(parksLayerq, 0);
+
+            صض
+
+
+
+
+
+
+        });
+
+    </script>
+</head>
+<body>
+    <div id="viewDiv"></div>
+
+    <div id="c">
+        (طلبة شعبة نظم المعلومات الجغرافية جامعة عين شمس)
+    </div>
+</body>
+</html>
